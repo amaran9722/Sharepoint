@@ -58,7 +58,7 @@ Param(
     #$loctermSetId = $LocationTermSet.Terms | Where-Object {$_.Name -eq $mmstermsetName} | Select-Object -ExpandProperty Id | Select-Object -ExpandProperty Guid
 
     #option 2 : Searching all the terms and updating the list column - As mentioned in the reference article - by Vardhaman Deshpande
-    $lmi =  New-Object Microsoft.SharePoint.Client.Taxonomy.LabelMatchInformation.newObject($clientContext);
+    $lmi =  New-Object Microsoft.SharePoint.client.Taxonomy.LabelMatchInformation($clientContext)
     $strmatch = New-Object Microsoft.SharePoint.Client.Taxonomy.StringMatchOption($clientContext)
 
         
